@@ -28,6 +28,16 @@
 }
 
 @media (max-width: 768px) {
+    .rodape-conteudo,
+    .rodape-creditos {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .rodape-links {
+        gap: 12px 18px;
+    }
+
     .home .informacoes {
         padding: 30px 20px;
         text-align: justify;
@@ -75,6 +85,10 @@
 }
 
 @media (max-width: 425px) {
+    .rodape {
+        padding: 30px 20px 18px;
+    }
+
     main::after{
         background: linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.4)100%, transparent 65%) ;
     }
