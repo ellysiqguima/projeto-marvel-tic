@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./transacao/script.js">
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .confirmation {
+            display: none;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 8px;
+            font-size: 14px;
+            line-height: 1.5;
+            width: 100%;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            box-shadow: 0 0 2px 1px rgba(0, 123, 255, 0.25);
+        }
+
+        .form-group select {
+            appearance: menulist;
+        }
+
+        .form-group select::-ms-expand {
+            display: none;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-actions button {
+            flex: 1;
+        }
+
+        .form-actions .cancel-button {
+            background-color: #dc3545;
+            margin-right: 10px;
+        }
+
+        .form-actions .cancel-button:hover {
+            background-color: #c82333;
+        }
+
+        .form-actions .submit-button {
+            background-color: #28a745;
+        }
+
+        .form-actions .submit-button:hover {
+            background-color: #218838;
+        }
+
+        .form-message {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #dc3545;
+        }
+
+        .form-message.success {
+            color: #28a745;
+        }
+    </style>
+    <title>Formulário de Assinatura</title>
+</head>
+<body>
+    <form id="order-form">
+        <h2>Formulário de Assinatura</h2>
+        <div class="form-group">
+          <label for="country">País:</label>
+          <select id="country" name="country">
+            <option value="brasil">Brasil</option>
+            <option value="eua">Estados Unidos</option>
+            <option value="pt">Portugal</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="city">Cidade:</label>
+          <input type="text" id="city" name="city" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Endereço:</label>
+          <input type="text" id="address" name="address" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Número de Telefone:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="payment">Formas de Pagamento:</label>
+          <select id="payment" name="payment">
+            <option value="credit-card">Cartão de Crédito</option>
+            <option value="debit-card">Cartão de Débito</option>
+            <option value="mbway">MbWay</option>
+            <option value="mult-card">Multibanco</option>
+            <option value="paypal">PayPal</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="cancel-button">Cancelar</button>
+          <button type="submit" class="submit-button">Finalizar Assinatura</button>
+        </div>
+        <div class="form-message success">
+          Assinatura finalizada com sucesso!
+        </div>
+      </form>
+      
+      <style>
+        body {
+          background-color: #005a9c;
+          color: #fff;
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+        }
+      
+        form {
+          background-color: #0f3d60;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          max-width: 400px;
+          width: 100%;
+        }
+      
+        h2 {
+          color: #ffd700;
+          margin-bottom: 20px;
+        }
+      
+        .form-group {
+          margin-bottom: 20px;
+        }
+      
+        .form-group label {
+          display: inline-block;
+          width: 100%;
+          margin-bottom: 5px;
+          color: #ffd700;
+        }
+      
+        .form-group input,
+        .form-group select {
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 8px;
+          font-size: 14px;
+          line-height: 1.5;
+          width: 100%;
+          color: #fff;
+          background-color: #1a2b34;
+        }
+      
+        .form-group input:focus,
+        .form-group select:focus {
+          outline: none;
+          box-shadow: 0 0 2px 1px rgba(255, 215, 0, 0.25);
+        }
+      
+        .form-group select {
+          appearance: menulist;
+        }
+      
+        .form-group select::-ms-expand {
+          display: none;
+        }
+      
+        .form-actions {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      
+        .form-actions button {
+          flex: 1;
+          margin-right: 10px;
+        }
+      
+        .form-actions .cancel-button {
+          background-color: #dc3545;
+        }
+      
+        .form-actions .cancel-button:hover {
+          background-color: #c82333;
+        }
+      
+        .form-actions .submit-button {
+          background-color: #28a745;
+        }
+      
+        .form-actions .submit-button:hover {
+          background-color: #218838;
+        }
+      
+        .form-message {
+          margin-top: 20px;
+          font-size: 14px;
+          color: #dc3545;
+          display: none;
+        }
+      
+        .form-message.success {
+          color: #28a745;
+          display: block;
+        }
+      </style>
+      
+      <script>
+        function submitForm() {
+          document.getElementById("order-form").style.display = "none";
+          document.querySelector(".form-message.success").style.display = "block";
+        }
+      </script>
+    </body>
+</html>
