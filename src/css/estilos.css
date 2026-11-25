@@ -9,9 +9,28 @@ video {
 }
 
 #logo {
-    position: absolute;
-    margin-top: 2.5%;
-    left: 10px;
+    position: static;
+    margin: 0;
+}
+
+.cabecalho .logo {
+    align-items: center;
+}
+
+.cabecalho .logo img {
+    display: block;
+    width: auto;
+    height: 64px;
+    object-fit: contain;
+}
+
+.cabecalho .logo hr {
+    flex: 0 0 1px;
+    width: 1px;
+    height: 36px;
+    margin: 0;
+    border: 0;
+    background: #454545;
 }
 
 .container {
@@ -226,21 +245,32 @@ video {
 }
 
 .movie-list {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    width: 100%;
 }
 
 .movie-container {
     position: relative;
-    width: 100%;            
+    min-width: 0;
+    width: auto;
     overflow: hidden;
-    margin-right: 20px;
+    margin: 0;
+    border-radius: 8px;
 }
 
+.movie-container > a {
+    display: block;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+}
 
 .movie-image {
+    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
