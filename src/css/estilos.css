@@ -366,17 +366,26 @@ video {
 }
 
 .rodape {
-    border-top: 3px solid #e62429;
-    background: #0b0b0b;
-    padding: 36px 8% 20px;
+    padding: 48px 6% 32px;
     color: #e8e8e8;
     font-family: 'Chalet';
 }
 
+.rodape-box {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 34px 40px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid #e62429;
+    border-radius: 16px;
+    background:
+        radial-gradient(circle at 100% 0, rgba(230, 36, 41, 0.16), transparent 32%),
+        linear-gradient(135deg, #191919, #0b0b0b 72%);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+}
+
 .rodape-conteudo,
 .rodape-creditos {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -408,12 +417,20 @@ video {
 }
 
 .rodape-links a {
+    padding: 9px 14px;
+    border: 1px solid #383838;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
     transition: color 0.2s ease;
+    transition-property: color, background-color, border-color, transform;
 }
 
 .rodape-links a:hover,
 .rodape-links a:focus-visible {
     color: #e62429;
+    border-color: rgba(230, 36, 41, 0.65);
+    background: rgba(230, 36, 41, 0.1);
+    transform: translateY(-2px);
 }
 
 .rodape-links a:focus-visible {
